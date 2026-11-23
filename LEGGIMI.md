@@ -5,7 +5,7 @@ Usa "Trova e sostituisci" dell'editor:
 
 | Cerca | Sostituisci con |
 |---|---|
-| `https://gianma1.github.io/` | l'indirizzo definitivo del sito |
+| `https://lezioni-piano-cuneo.vercel.app/` | l'indirizzo definitivo del sito |
 | `lorellamigliaccio@gmail.com` | l'email di Lorella |
 | `INSERISCI-QUI-LA-CHIAVE-WEB3FORMS` | la chiave di Web3Forms (vedi punto 3) |
 
@@ -33,8 +33,8 @@ I file della cartella `fonts/` contengono il carattere del sito (Bodoni Moda, li
 
 ## 4. Pubblicazione gratuita su GitHub Pages
 1. Su GitHub crea un repository **pubblico** chiamato esattamente `Gianma1.github.io`
-   (il sito sarà su `https://gianma1.github.io/`).
-   In alternativa usa un nome qualsiasi, es. `pianoforte`, e il sito sarà su `https://gianma1.github.io/pianoforte/`
+   (il sito sarà su `https://lezioni-piano-cuneo.vercel.app/`).
+   In alternativa usa un nome qualsiasi, es. `pianoforte`, e il sito sarà su `https://lezioni-piano-cuneo.vercel.app/pianoforte/`
    (in quel caso aggiorna gli indirizzi del punto 1).
 2. Carica `index.html`, `robots.txt`, `sitemap.xml` e le cartelle `fonts/` e `img/` ("Add file" → "Upload files").
 3. Settings → Pages → Source: "Deploy from a branch", branch `main`, cartella `/ (root)` → Save.

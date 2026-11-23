@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gianma1.github.io/sitemap.xml
+Sitemap: https://lezioni-piano-cuneo.vercel.app/sitemap.xml
