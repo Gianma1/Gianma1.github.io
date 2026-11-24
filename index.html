@@ -455,7 +455,7 @@ footer a{color:var(--ottone-chiaro)}
       <a class="indirizzo-email" href="mailto:lezionidipianofortecuneo@gmail.com">lezionidipianofortecuneo@gmail.com</a>
     </div>
 
-    <form class="modulo" id="modulo" action="https://formsubmit.co/ajax/lezionidipianofortecuneo@gmail.com" method="POST" novalidate>
+    <form class="modulo" id="modulo" action="https://api.web3forms.com/submit" method="POST" novalidate>
       <input type="text" name="_honey" class="trappola" tabindex="-1" autocomplete="off" aria-hidden="true">
 
       <div class="campo"><label for="nome">Nome e cognome *</label><input id="nome" name="nome" type="text" autocomplete="name" required></div>
@@ -521,7 +521,7 @@ footer a{color:var(--ottone-chiaro)}
     <details id="privacy">
       <summary>Informativa privacy</summary>
       <div>
-        <p>Titolare del trattamento è l'insegnante (<a href="mailto:lezionidipianofortecuneo@gmail.com">lezionidipianofortecuneo@gmail.com</a>). I dati inseriti nel modulo (nome, email, telefono facoltativo e messaggio) sono usati solo per rispondere alla richiesta e organizzare le lezioni, sulla base del consenso dato con l'invio. Il modulo è inoltrato via email tramite il servizio FormSubmit (formsubmit.co). I dati non sono ceduti a terzi né usati per pubblicità e sono conservati per il tempo necessario a gestire la richiesta. Puoi chiedere in qualsiasi momento accesso, rettifica o cancellazione scrivendo all'indirizzo sopra, e hai diritto di reclamo al Garante per la protezione dei dati personali.</p>
+        <p>Titolare del trattamento è l'insegnante (<a href="mailto:lezionidipianofortecuneo@gmail.com">lezionidipianofortecuneo@gmail.com</a>). I dati inseriti nel modulo (nome, email, telefono facoltativo e messaggio) sono usati solo per rispondere alla richiesta e organizzare le lezioni, sulla base del consenso dato con l'invio. Il modulo è inoltrato via email tramite il servizio Web3Forms (web3forms.com). I dati non sono ceduti a terzi né usati per pubblicità e sono conservati per il tempo necessario a gestire la richiesta. Puoi chiedere in qualsiasi momento accesso, rettifica o cancellazione scrivendo all'indirizzo sopra, e hai diritto di reclamo al Garante per la protezione dei dati personali.</p>
         <p>Il sito non usa cookie di profilazione né strumenti di statistica. Il carattere tipografico è ospitato sul sito stesso.</p>
       </div>
     </details>
@@ -615,7 +615,7 @@ footer a{color:var(--ottone-chiaro)}
 
   /* ---------- Invio del modulo ---------- */
   /* Chiave gratuita di web3forms.com (più veloce). Se vuota si usa FormSubmit. */
-  const CHIAVE_WEB3FORMS = '';
+  const CHIAVE_WEB3FORMS = 'e46f6fbb-49cd-4ade-b514-95a06cbed0a8';
   const modulo = document.getElementById('modulo');
   const esito = document.getElementById('esito');
   modulo.addEventListener('submit', async e => {

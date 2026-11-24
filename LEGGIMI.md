@@ -25,11 +25,11 @@ Finché una foto manca, al suo posto si vede un riquadro rigato (come le corde d
 
 I file della cartella `fonts/` contengono il carattere del sito (Bodoni Moda, licenza libera SIL OFL): vanno caricati insieme al resto.
 
-## 3. Modulo di contatto (FormSubmit, gratuito)
-Il modulo invia le richieste a lezionidipianofortecuneo@gmail.com tramite formsubmit.co, senza account né chiavi.
-La prima volta che qualcuno invia il modulo, FormSubmit manda all'indirizzo di contatto un'email "Confirm your email / Activate form":
-basta premere il pulsante di attivazione una volta sola. Da quel momento ogni richiesta arriva come email,
-e rispondendo si risponde direttamente a chi ha scritto.
+## 3. Modulo di contatto (Web3Forms, gratuito fino a 250 messaggi al mese)
+Il modulo invia le richieste a lezionidipianofortecuneo@gmail.com tramite web3forms.com.
+La chiave è scritta in `index.html` (cerca CHIAVE_WEB3FORMS): è fatta per stare nel codice pubblico del sito.
+Se la chiave viene tolta, il modulo torna a usare FormSubmit.
+Rispondendo all'email ricevuta si risponde direttamente a chi ha scritto.
 
 ## 4. Pubblicazione gratuita su GitHub Pages
 1. Su GitHub crea un repository **pubblico** chiamato esattamente `Gianma1.github.io`
