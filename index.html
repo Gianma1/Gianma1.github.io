@@ -631,15 +631,24 @@ footer a{color:var(--ottone-chiaro)}
     const btn = modulo.querySelector('button[type=submit]');
     btn.disabled = true; btn.textContent = 'Invio in corso';
     esito.className = 'esito'; esito.textContent = '';
-    const dati = new FormData(modulo);
+    const dati = Object.fromEntries(new FormData(modulo));
+    delete dati.privacy;
     try{
-      const r = await fetch(modulo.action, { method:'POST', body:dati, headers:{ Accept:'application/json' } });
-      const j = await r.json();
-      if (!r.ok || String(j.success) !== 'true') throw new Error(j.message);
+      const r = await fetch(modulo.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(dati)
+      });
+      let j = {};
+      try { j = await r.json(); } catch(_) {}
+      const riuscito = j.success === true || j.success === 'true';
+      const daAttivare = /activ/i.test(j.message || '');   /* prima volta: FormSubmit chiede a Lorella di attivare il modulo */
+      if (!r.ok || (!riuscito && !daAttivare)) throw new Error(j.message || r.status);
       esito.className = 'esito ok';
       esito.textContent = "Richiesta inviata. Ti ricontatterò al più presto all'indirizzo email che hai indicato.";
       modulo.reset();
     }catch(err){
+      console.warn('Invio modulo:', err);
       esito.className = 'esito errore';
       esito.textContent = "La richiesta non è partita. Controlla la connessione e riprova, oppure scrivi direttamente all'indirizzo email indicato.";
     }finally{
