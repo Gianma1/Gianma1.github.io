@@ -52,14 +52,15 @@
         "postalCode": "12010",
         "addressCountry": "IT"
       },
-      "knowsAbout": ["Pianoforte", "Lezioni di pianoforte", "Lettura musicale"]
+      "knowsAbout": ["Pianoforte", "Didattica della musica", "Teoria musicale", "Solfeggio"],
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Conservatorio Statale di Musica G.F. Ghedini", "address": { "@type": "PostalAddress", "addressLocality": "Cuneo", "addressCountry": "IT" } }
     },
     {
       "@type": "Service",
       "@id": "https://lezioni-piano-cuneo.vercel.app/#lezioni",
       "name": "Lezioni private di pianoforte",
       "serviceType": "Lezioni di pianoforte",
-      "description": "Lezioni private di pianoforte a Cervasca (Cuneo) per bambini, ragazzi e adulti, dal principiante al livello avanzato. Prima lezione gratuita.",
+      "description": "Lezioni private di pianoforte, teoria e solfeggio a Cervasca (Cuneo) per bambini, ragazzi e adulti, dal principiante al livello avanzato. Prima lezione gratuita.",
       "provider": { "@id": "https://lezioni-piano-cuneo.vercel.app/#lorella" },
       "audience": { "@type": "Audience", "audienceType": "Bambini, ragazzi e adulti di ogni livello" },
       "areaServed": [
@@ -78,23 +79,6 @@
         "price": "0",
         "priceCurrency": "EUR"
       }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "La prima lezione è davvero gratuita?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sì. La prima lezione è gratuita e senza impegno: serve per conoscerci, capire il livello di partenza e gli obiettivi." } },
-        { "@type": "Question", "name": "Dove si svolgono le lezioni di pianoforte?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Le lezioni si svolgono a casa dell'insegnante a Cervasca, a pochi minuti da Cuneo, Vignolo, Bernezzo e Caraglio." } },
-        { "@type": "Question", "name": "Da che età si può iniziare a studiare pianoforte?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Non c'è un'età giusta: con i più piccoli si parte in modo giocoso e da adulti non è mai tardi per cominciare." } },
-        { "@type": "Question", "name": "Bisogna saper leggere la musica?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. La lettura della musica si impara insieme, un passo alla volta, durante le lezioni." } },
-        { "@type": "Question", "name": "Serve avere un pianoforte a casa?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Per esercitarsi tra una lezione e l'altra serve uno strumento; per iniziare può andare bene anche una tastiera digitale con tasti pesati." } },
-        { "@type": "Question", "name": "Quanto costano le lezioni?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Le tariffe dipendono dalla durata e dalla frequenza delle lezioni. Scrivi un messaggio per ricevere tutte le informazioni." } }
-      ]
     }
   ]
 }
@@ -188,7 +172,7 @@ section{scroll-margin-top:var(--nav-h)}
 .tasto.attivo{color:var(--feltro);transform:translateY(2px);box-shadow:inset 0 -2px 0 var(--ottone)}
 .tasto:focus-visible{outline-offset:-4px}
 .neri{position:absolute;inset:0 2px 0 2px;pointer-events:none}
-.nero{position:absolute;top:0;width:6.2%;height:36px;transform:translateX(-50%);border-radius:0 0 3px 3px;
+.nero{position:absolute;top:0;width:9%;height:36px;transform:translateX(-50%);border-radius:0 0 3px 3px;
   background:linear-gradient(180deg,#000 0%,#1b1b1b 70%,#3b3b3b 88%,#111 100%);
   box-shadow:0 3px 4px rgba(0,0,0,.55),inset 1px 0 0 rgba(255,255,255,.08)}
 
@@ -230,7 +214,7 @@ section{scroll-margin-top:var(--nav-h)}
 .chi-sono{padding:24px 0 128px}
 .chi-sono .contenitore{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(32px,7vw,112px);align-items:end}
 .chi-sono .ritratto{aspect-ratio:3/4}
-.lede{font-family:var(--display);font-size:clamp(1.45rem,2.2vw,1.8rem);line-height:1.38;max-width:30ch;margin-bottom:1.1em}
+.lede{font-family:var(--display);font-size:clamp(1.35rem,1.9vw,1.6rem);line-height:1.42;max-width:36ch;margin-bottom:1.1em}
 
 /* =================================================================
    LEZIONI (lacca nera)
@@ -250,29 +234,6 @@ section{scroll-margin-top:var(--nav-h)}
 .lezioni .chiusa{margin-top:40px;font-family:var(--display);font-style:italic;font-size:1.25rem;color:var(--ottone-chiaro);max-width:none}
 
 /* =================================================================
-   COME SI COMINCIA (quattro battute)
-   ================================================================= */
-.percorso{padding:128px 0 120px}
-.battute{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:56px}
-.battuta{position:relative;padding:0 28px 0 0}
-.battuta .pentagramma{position:relative;height:41px;margin:22px 0 34px;
-  background:repeating-linear-gradient(180deg,rgba(28,30,38,.55) 0 1px,transparent 1px 10px);
-  border-right:1px solid rgba(28,30,38,.7)}
-.battuta:first-child .pentagramma{border-left:1px solid rgba(28,30,38,.7)}
-.battuta:last-child .pentagramma{border-right:0}
-.battuta:last-child .pentagramma::after{ /* doppia stanghetta finale */
-  content:"";position:absolute;right:0;top:0;bottom:0;width:7px;border-left:1px solid var(--inchiostro);border-right:4px solid var(--inchiostro)}
-.battuta .numero{position:absolute;top:0;left:2px;font-family:var(--display);font-style:italic;font-size:.95rem;color:var(--grafite)}
-.semibreve{position:absolute;left:42%;width:17px;height:12px;border-radius:50%;
-  border:3px solid var(--inchiostro);border-left-width:4.5px;border-right-width:4.5px;transform:rotate(-18deg)}
-.battuta:nth-child(1) .semibreve{top:34px}
-.battuta:nth-child(2) .semibreve{top:24px}
-.battuta:nth-child(3) .semibreve{top:14px}
-.battuta:nth-child(4) .semibreve{top:-1px}
-.battuta h3{margin-bottom:.45em}
-.battuta p{font-size:1rem;color:#43454c;max-width:28ch}
-
-/* =================================================================
    PROVA GRATUITA (feltro)
    ================================================================= */
 .prova{background:var(--feltro);color:#f4e6e8}
@@ -284,35 +245,8 @@ section{scroll-margin-top:var(--nav-h)}
    GALLERIA
    ================================================================= */
 .galleria{padding:128px 0}
-.mosaico{display:grid;grid-template-columns:1.35fr 1fr 1fr;grid-template-rows:260px 260px;gap:14px;margin-top:48px}
+.mosaico{display:grid;grid-template-columns:1.35fr 1fr 1fr;grid-template-rows:260px 260px;gap:14px}
 .mosaico .foto:first-child{grid-row:span 2}
-
-/* =================================================================
-   DOVE
-   ================================================================= */
-.dove{background:var(--carta-2);padding:120px 0}
-.dove .contenitore{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
-.paesi{font-family:var(--display);font-style:italic;font-size:clamp(1.4rem,2.2vw,1.75rem);line-height:1.45;max-width:30ch;margin:.2em 0 1.2em}
-.nota-piccola{font-size:.95rem;color:var(--grafite)}
-.mappa{aspect-ratio:1/1;background:#d6d8d1;border:1px solid #cfd1ca}
-.mappa iframe{width:100%;height:100%;border:0;filter:grayscale(1) contrast(1.05) brightness(1.02)}
-
-/* =================================================================
-   DOMANDE
-   ================================================================= */
-.domande{padding:128px 0}
-.domande .contenitore{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(32px,6vw,96px);align-items:start}
-.domande .contenitore > div:first-child{position:sticky;top:calc(var(--nav-h) + 32px)}
-.domande .contattami{margin-top:.4em}
-.elenco-domande{border-top:1px solid #c9cbc4}
-.elenco-domande details{border-bottom:1px solid #c9cbc4}
-.elenco-domande summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:24px;
-  padding:26px 0;font-family:var(--display);font-size:1.45rem;line-height:1.25}
-.elenco-domande summary::-webkit-details-marker{display:none}
-.elenco-domande summary::after{content:"";flex:none;width:11px;height:11px;margin-top:6px;border-right:1.5px solid var(--feltro);border-bottom:1.5px solid var(--feltro);
-  transform:rotate(45deg);transition:transform .25s}
-.elenco-domande details[open] summary::after{transform:rotate(-135deg)}
-.elenco-domande details p{margin:-6px 0 26px;color:#43454c}
 
 /* =================================================================
    CONTATTI
@@ -358,11 +292,6 @@ footer a{color:var(--ottone-chiaro)}
 /* =================================================================
    SCHERMI PIÙ STRETTI
    ================================================================= */
-@media (max-width:1020px){
-  .battute{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}
-  .battuta:nth-child(3) .pentagramma{border-left:1px solid rgba(28,30,38,.7)}
-  .battuta:nth-child(2) .pentagramma{border-right:1px solid rgba(28,30,38,.7)}
-}
 @media (max-width:860px){
   :root{--nav-h:58px}
   .coperchio{height:54px}
@@ -380,24 +309,20 @@ footer a{color:var(--ottone-chiaro)}
   .tasto.nero-dopo::after{content:"";position:absolute;right:-14px;bottom:-16px;width:42%;height:30px;z-index:2;pointer-events:none;
     border-radius:3px 0 0 3px;background:linear-gradient(90deg,#000,#1b1b1b 70%,#3b3b3b)}
   .apertura{padding:36px 0 80px}
-  .apertura .contenitore,.chi-sono .contenitore,.lezioni .testa,.dove .contenitore,.domande .contenitore,.contatti .contenitore{grid-template-columns:1fr}
+  .apertura .contenitore,.chi-sono .contenitore,.lezioni .testa,.contatti .contenitore{grid-template-columns:1fr}
   .apertura .ritratto,.chi-sono .ritratto{max-width:440px}
   .chi-sono{padding-bottom:96px}
   .voci li{grid-template-columns:1fr;gap:8px}
-  .lezioni,.percorso,.galleria,.dove,.domande,.contatti{padding:88px 0}
+  .lezioni,.galleria,.contatti{padding:88px 0}
   .lezioni .testa{gap:16px;margin-bottom:40px}
   .mosaico{grid-template-columns:1fr 1fr;grid-template-rows:auto}
   .mosaico .foto{aspect-ratio:1/1}
   .mosaico .foto:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:4/3}
   .mosaico .foto:nth-child(4){grid-column:auto}
   .mosaico .foto:nth-child(5){grid-column:span 2;aspect-ratio:2/1}
-  .domande .contenitore > div:first-child{position:static}
 }
 @media (max-width:560px){
   body{font-size:1.06rem}
-  .battute{grid-template-columns:1fr}
-  .battuta .pentagramma{border-left:1px solid rgba(28,30,38,.7)!important;border-right:1px solid rgba(28,30,38,.7)}
-  .battuta:last-child .pentagramma{border-right:0}
   .modulo{grid-template-columns:1fr}
   .incipit svg{left:16px}
 }
@@ -424,16 +349,11 @@ footer a{color:var(--ottone-chiaro)}
     <a class="tasto nero-dopo" href="#chi-sono" data-nota="293.66">Chi sono</a>
     <a class="tasto" href="#contatti" data-nota="329.63">Contatti</a>
     <a class="tasto nero-dopo" href="#lezioni" data-nota="349.23">Lezioni</a>
-    <a class="tasto nero-dopo" href="#percorso" data-nota="392.00">Primi passi</a>
-    <a class="tasto nero-dopo" href="#galleria" data-nota="440.00">Galleria</a>
-    <a class="tasto" href="#dove" data-nota="493.88">Dove</a>
-    <a class="tasto" href="#domande" data-nota="523.25">Domande</a>
+    <a class="tasto" href="#galleria" data-nota="392.00">Galleria</a>
     <div class="neri" aria-hidden="true">
-      <span class="nero" style="left:12.5%"></span>
-      <span class="nero" style="left:25%"></span>
-      <span class="nero" style="left:50%"></span>
-      <span class="nero" style="left:62.5%"></span>
-      <span class="nero" style="left:75%"></span>
+      <span class="nero" style="left:20%"></span>
+      <span class="nero" style="left:40%"></span>
+      <span class="nero" style="left:80%"></span>
     </div>
   </nav>
 </header>
@@ -465,7 +385,7 @@ footer a{color:var(--ottone-chiaro)}
       <p class="introduzione">Lezioni private per bambini, ragazzi e adulti di ogni livello, a pochi minuti da Cuneo. La prima lezione è gratuita.</p>
       <div class="azioni">
         <a class="pulsante pulsante-inchiostro" href="#contatti">Prenota la lezione gratuita</a>
-        <a class="collegamento" href="#percorso">Come funzionano le lezioni</a>
+        <a class="collegamento" href="#lezioni">Scopri le lezioni</a>
       </div>
     </div>
 
@@ -491,9 +411,9 @@ footer a{color:var(--ottone-chiaro)}
     <div>
       <h2>Chi sono</h2>
       <!-- ▼▼▼ TESTO "CHI SONO": sostituire con la descrizione di Superprof ▼▼▼ -->
-      <p class="lede">Insegno pianoforte a chi si siede alla tastiera per la prima volta, a chi vuole riprendere dopo anni e a chi desidera perfezionarsi.</p>
-      <p>Ogni percorso è costruito sulla persona: obiettivi, tempi e repertorio cambiano da allievo ad allievo. Con i più piccoli lavoro in modo giocoso e graduale; con ragazzi e adulti punto sul metodo, sull'ascolto e sul piacere di suonare i brani che amano.</p>
-      <p>Le lezioni sono individuali e si svolgono a casa mia, a Cervasca, in una stanza tranquilla dedicata alla musica.</p>
+      <p class="lede">Sono laureata in Pianoforte e Didattica della Musica presso il Conservatorio Statale di Musica "G.F. Ghedini di Cuneo". Ho insegnato musica in scuole pubbliche e private. Disponibile per lezioni di Pianoforte, Teoria e Solfeggio.</p>
+      <p>Insegno pianoforte a chi si siede alla tastiera per la prima volta, a chi vuole riprendere dopo anni e a chi desidera perfezionarsi.</p>
+      <p>Le lezioni sono individuali e si svolgono a casa mia, a Cervasca.</p>
       <!-- ▲▲▲ fine testo da sostituire ▲▲▲ -->
     </div>
   </div>
@@ -562,41 +482,6 @@ footer a{color:var(--ottone-chiaro)}
   </div>
 </section>
 
-<!-- =========================== COME SI COMINCIA =========================== -->
-<section class="percorso" id="percorso">
-  <div class="contenitore">
-    <h2>Come si comincia</h2>
-    <p>Quattro battute, dalla prima email alla prima musica.</p>
-    <ol class="battute" style="list-style:none;padding:0">
-      <li class="battuta">
-        <span class="numero">1</span>
-        <div class="pentagramma" aria-hidden="true"><span class="semibreve"></span></div>
-        <h3>Scrivimi</h3>
-        <p>Compila il modulo o mandami una email: dimmi chi studierà, quanti anni ha e se ha già suonato.</p>
-      </li>
-      <li class="battuta">
-        <span class="numero">2</span>
-        <div class="pentagramma" aria-hidden="true"><span class="semibreve"></span></div>
-        <h3>La lezione gratuita</h3>
-        <p>Ci conosciamo al pianoforte, senza impegno: capiamo il livello di partenza e gli obiettivi.</p>
-      </li>
-      <li class="battuta">
-        <span class="numero">3</span>
-        <div class="pentagramma" aria-hidden="true"><span class="semibreve"></span></div>
-        <h3>Il tuo percorso</h3>
-        <p>Scegliamo insieme metodo, brani e frequenza delle lezioni in base alle tue esigenze.</p>
-      </li>
-      <li class="battuta">
-        <span class="numero">4</span>
-        <div class="pentagramma" aria-hidden="true"><span class="semibreve"></span></div>
-        <h3>Si suona</h3>
-        <p>Lezioni regolari a Cervasca, con esercizi chiari da portare a casa tra una lezione e l'altra.</p>
-      </li>
-    </ol>
-    <a class="collegamento contattami" href="#contatti">Contattami</a>
-  </div>
-</section>
-
 <div class="prova">
   <div class="contenitore">
     <div>
@@ -610,7 +495,6 @@ footer a{color:var(--ottone-chiaro)}
 <!-- =========================== GALLERIA =========================== -->
 <section class="galleria" id="galleria">
   <div class="contenitore">
-    <h2>Il pianoforte e la stanza delle lezioni</h2>
     <!-- FOTO: img/galleria-1.jpg … img/galleria-5.jpg -->
     <div class="mosaico">
       <figure class="foto"><img src="img/galleria-1.jpg" alt="Il pianoforte dove si svolgono le lezioni a Cervasca" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-1.jpg</figcaption></figure>
@@ -618,42 +502,6 @@ footer a{color:var(--ottone-chiaro)}
       <figure class="foto"><img src="img/galleria-3.jpg" alt="Spartiti sul leggio" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-3.jpg</figcaption></figure>
       <figure class="foto"><img src="img/galleria-4.jpg" alt="Un momento di lezione di pianoforte" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-4.jpg</figcaption></figure>
       <figure class="foto"><img src="img/galleria-5.jpg" alt="Allievi durante un saggio di pianoforte" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-5.jpg</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- =========================== DOVE =========================== -->
-<section class="dove" id="dove">
-  <div class="contenitore">
-    <div>
-      <h2>A Cervasca, a pochi minuti da Cuneo</h2>
-      <p>Le lezioni si svolgono a casa mia, a Cervasca. È comodo arrivarci da</p>
-      <p class="paesi">San Defendente, Santa Croce, Cuneo, Vignolo, Bernezzo, Caraglio, Roccasparvera, Borgo San Dalmazzo e Boves.</p>
-      <p class="nota-piccola">L'indirizzo preciso te lo comunico quando fissiamo la prima lezione.</p>
-      <a class="collegamento contattami" href="#contatti">Contattami</a>
-    </div>
-    <div class="mappa">
-      <iframe title="Mappa della zona tra Cervasca e Cuneo" loading="lazy"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=7.38%2C44.33%2C7.58%2C44.43&amp;layer=mapnik"></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- =========================== DOMANDE =========================== -->
-<section class="domande" id="domande">
-  <div class="contenitore">
-    <div>
-      <h2>Domande frequenti</h2>
-      <p>Hai un'altra domanda? Scrivimi pure.</p>
-      <a class="collegamento contattami" href="#contatti">Contattami</a>
-    </div>
-    <div class="elenco-domande">
-      <details open><summary>La prima lezione è davvero gratuita?</summary><p>Sì. La prima lezione è gratuita e senza impegno: serve per conoscerci, capire il livello di partenza e gli obiettivi, e decidere insieme come proseguire.</p></details>
-      <details><summary>Dove si svolgono le lezioni?</summary><p>A casa mia a Cervasca, a pochi minuti da Cuneo, Vignolo, Bernezzo e Caraglio. L'indirizzo preciso te lo comunico quando fissiamo la lezione.</p></details>
-      <details><summary>Da che età si può iniziare?</summary><p>Non c'è un'età giusta: con i più piccoli si parte in modo giocoso e graduale, e da adulti non è mai troppo tardi per cominciare o per riprendere.</p></details>
-      <details><summary>Bisogna saper leggere la musica?</summary><p>No. La lettura della musica si impara insieme, un passo alla volta, durante le lezioni.</p></details>
-      <details><summary>Serve avere un pianoforte a casa?</summary><p>Per esercitarsi tra una lezione e l'altra serve uno strumento. Per iniziare può andare bene anche una tastiera digitale con tasti pesati: se hai dubbi, ti consiglio volentieri.</p></details>
-      <details><summary>Quanto costano le lezioni?</summary><p>Le tariffe dipendono dalla durata e dalla frequenza delle lezioni. Scrivimi e ti rispondo con tutte le informazioni.</p></details>
     </div>
   </div>
 </section>
@@ -718,9 +566,10 @@ footer a{color:var(--ottone-chiaro)}
     suona(parseFloat(tasto.dataset.nota), ritardo / 1000);
   }
 
-  /* Arpeggio Do–Mi–Sol–Do: 1°, 3°, 5° e 8° tasto */
+  /* Arpeggio Do–Mi–Sol sui tasti, poi il Do acuto */
   function arpeggio(){
-    [0, 2, 4, 7].forEach((i, n) => premi(tasti[i], 150 + n * 200));
+    [0, 2, 4].forEach((i, n) => premi(tasti[i], 150 + n * 200));
+    suona(523.25, .75);
   }
 
   tasti.forEach(t => t.addEventListener('click', () => {
