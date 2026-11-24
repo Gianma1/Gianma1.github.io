@@ -1,4 +1,4 @@
-# Sito "Lezioni di pianoforte – Lorella Migliaccio"
+# Sito "Lezioni di pianoforte a Cervasca"
 
 ## 1. Cose da sostituire in `index.html`, `robots.txt` e `sitemap.xml`
 Usa "Trova e sostituisci" dell'editor:
