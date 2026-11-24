@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lezioni-piano-cuneo.vercel.app/sitemap.xml
+Sitemap: https://lezionidipianofortecuneo.it/sitemap.xml

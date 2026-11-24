@@ -5,7 +5,7 @@ Usa "Trova e sostituisci" dell'editor:
 
 | Cerca | Sostituisci con |
 |---|---|
-| `https://lezioni-piano-cuneo.vercel.app/` | l'indirizzo definitivo del sito |
+| `https://lezionidipianofortecuneo.it/` | l'indirizzo definitivo del sito |
 | `lezionidipianofortecuneo@gmail.com` | l'email di contatto |
 
 Il testo "Chi sono" è segnato con `▼▼▼` dentro `index.html`: incolla lì la descrizione di Superprof.
@@ -33,8 +33,8 @@ Rispondendo all'email ricevuta si risponde direttamente a chi ha scritto.
 
 ## 4. Pubblicazione gratuita su GitHub Pages
 1. Su GitHub crea un repository **pubblico** chiamato esattamente `Gianma1.github.io`
-   (il sito sarà su `https://lezioni-piano-cuneo.vercel.app/`).
-   In alternativa usa un nome qualsiasi, es. `pianoforte`, e il sito sarà su `https://lezioni-piano-cuneo.vercel.app/pianoforte/`
+   (il sito sarà su `https://lezionidipianofortecuneo.it/`).
+   In alternativa usa un nome qualsiasi, es. `pianoforte`, e il sito sarà su `https://lezionidipianofortecuneo.it/pianoforte/`
    (in quel caso aggiorna gli indirizzi del punto 1).
 2. Carica `index.html`, `robots.txt`, `sitemap.xml` e le cartelle `fonts/` e `img/` ("Add file" → "Upload files").
 3. Settings → Pages → Source: "Deploy from a branch", branch `main`, cartella `/ (root)` → Save.

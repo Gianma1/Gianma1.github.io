@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "lezioni-piano-cuneo.vercel.app" }],
+      "destination": "https://lezionidipianofortecuneo.it/:path*",
+      "permanent": true
+    }
+  ]
+}
