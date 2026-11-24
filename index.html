@@ -255,8 +255,9 @@ section{scroll-margin-top:var(--nav-h)}
 .contatti .contenitore{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,7vw,112px);position:relative}
 .contatti p{color:#43454c}
 .contatti strong{color:var(--inchiostro);font-weight:600}
-.indirizzo-email{display:inline-block;font-family:var(--display);font-size:clamp(1.4rem,2.4vw,1.9rem);color:var(--feltro);
-  text-decoration:none;border-bottom:1px solid rgba(140,31,51,.35);padding-bottom:4px;margin:.4em 0 1.4em;word-break:break-all}
+.indirizzo-email{display:inline-block;max-width:100%;font-family:var(--display);font-size:clamp(1rem,1.75vw,1.5rem);color:var(--feltro);
+  text-decoration:none;border-bottom:1px solid rgba(140,31,51,.35);padding-bottom:4px;margin:.4em 0 1.4em;white-space:nowrap}
+@media (max-width:860px){.indirizzo-email{font-size:min(1.5rem,4.3vw)}}
 .indirizzo-email:hover{color:var(--inchiostro);border-color:var(--inchiostro)}
 
 .modulo{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px}
