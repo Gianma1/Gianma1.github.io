@@ -207,7 +207,6 @@ section{scroll-margin-top:var(--nav-h)}
 .foto .segnaposto em{font-family:var(--display);font-size:1.3rem;color:var(--grafite)}
 .foto img[hidden]+.segnaposto{display:flex}
 .ritratto{aspect-ratio:4/5}
-.didascalia{font-family:var(--display);font-style:italic;font-size:1rem;color:var(--grafite);margin-top:12px}
 
 /* =================================================================
    CHI SONO
@@ -276,7 +275,9 @@ section{scroll-margin-top:var(--nav-h)}
 .consenso input{flex:none;width:18px;height:18px;margin-top:5px;accent-color:var(--feltro)}
 .consenso a{color:var(--feltro)}
 .invio{grid-column:1/-1;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
-.invio .pulsante[disabled]{opacity:.6;cursor:progress}
+.invio .pulsante[disabled]{opacity:.75;cursor:progress}
+.pulsante.in-corso::after{content:"";display:inline-block;width:1.2em;text-align:left;animation:puntini 1.2s steps(4,end) infinite}
+@keyframes puntini{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
 .esito{margin:0;font-size:.98rem;max-width:44ch}
 .esito.ok{color:#2f6b3a}
 .esito.errore{color:var(--feltro)}
@@ -418,10 +419,9 @@ footer a{color:var(--ottone-chiaro)}
     <div>
       <!-- FOTO: img/copertina.jpg (verticale 4:5, es. 1200×1500 px) -->
       <figure class="foto ritratto">
-        <img src="img/copertina.jpg" alt="L'insegnante al pianoforte" width="1200" height="1500" fetchpriority="high" onerror="this.hidden=true">
+        <img src="img/copertina.jpg" alt="" width="1200" height="1500" fetchpriority="high" onerror="this.hidden=true">
         <figcaption class="segnaposto"><em>Foto</em>img/copertina.jpg</figcaption>
       </figure>
-      <p class="didascalia">Al pianoforte, a Cervasca</p>
     </div>
   </div>
 </section>
@@ -431,7 +431,7 @@ footer a{color:var(--ottone-chiaro)}
   <div class="contenitore">
     <!-- FOTO: img/ritratto.jpg (ritratto verticale 3:4) -->
     <figure class="foto ritratto">
-      <img src="img/ritratto.jpg" alt="Ritratto dell'insegnante di pianoforte a Cervasca" width="900" height="1200" loading="lazy" onerror="this.hidden=true">
+      <img src="img/ritratto.jpg" alt="" width="900" height="1200" loading="lazy" onerror="this.hidden=true">
       <figcaption class="segnaposto"><em>Foto</em>img/ritratto.jpg</figcaption>
     </figure>
     <div>
@@ -456,8 +456,6 @@ footer a{color:var(--ottone-chiaro)}
     </div>
 
     <form class="modulo" id="modulo" action="https://formsubmit.co/ajax/lezionidipianofortecuneo@gmail.com" method="POST" novalidate>
-      <input type="hidden" name="_subject" value="Nuova richiesta dal sito: lezioni di pianoforte">
-      <input type="hidden" name="_template" value="table">
       <input type="text" name="_honey" class="trappola" tabindex="-1" autocomplete="off" aria-hidden="true">
 
       <div class="campo"><label for="nome">Nome e cognome *</label><input id="nome" name="nome" type="text" autocomplete="name" required></div>
@@ -506,11 +504,11 @@ footer a{color:var(--ottone-chiaro)}
   <div class="contenitore">
     <!-- FOTO: img/galleria-1.jpg … img/galleria-5.jpg -->
     <div class="mosaico">
-      <figure class="foto"><img src="img/galleria-1.jpg" alt="Il pianoforte dove si svolgono le lezioni a Cervasca" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-1.jpg</figcaption></figure>
-      <figure class="foto"><img src="img/galleria-2.jpg" alt="Dettaglio della tastiera del pianoforte" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-2.jpg</figcaption></figure>
-      <figure class="foto"><img src="img/galleria-3.jpg" alt="Spartiti sul leggio" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-3.jpg</figcaption></figure>
-      <figure class="foto"><img src="img/galleria-4.jpg" alt="Un momento di lezione di pianoforte" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-4.jpg</figcaption></figure>
-      <figure class="foto"><img src="img/galleria-5.jpg" alt="Allievi durante un saggio di pianoforte" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-5.jpg</figcaption></figure>
+      <figure class="foto"><img src="img/galleria-1.jpg" alt="" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-1.jpg</figcaption></figure>
+      <figure class="foto"><img src="img/galleria-2.jpg" alt="" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-2.jpg</figcaption></figure>
+      <figure class="foto"><img src="img/galleria-3.jpg" alt="" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-3.jpg</figcaption></figure>
+      <figure class="foto"><img src="img/galleria-4.jpg" alt="" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-4.jpg</figcaption></figure>
+      <figure class="foto"><img src="img/galleria-5.jpg" alt="" loading="lazy" onerror="this.hidden=true"><figcaption class="segnaposto"><em>Foto</em>img/galleria-5.jpg</figcaption></figure>
     </div>
   </div>
 </section>
@@ -615,7 +613,9 @@ footer a{color:var(--ottone-chiaro)}
   /* ---------- Informativa privacy dal modulo ---------- */
   document.getElementById('apri-privacy').addEventListener('click', () => { document.getElementById('privacy').open = true; });
 
-  /* ---------- Invio del modulo (FormSubmit: arriva come email all'insegnante) ---------- */
+  /* ---------- Invio del modulo ---------- */
+  /* Chiave gratuita di web3forms.com (più veloce). Se vuota si usa FormSubmit. */
+  const CHIAVE_WEB3FORMS = '';
   const modulo = document.getElementById('modulo');
   const esito = document.getElementById('esito');
   modulo.addEventListener('submit', async e => {
@@ -627,20 +627,29 @@ footer a{color:var(--ottone-chiaro)}
       return;
     }
     const btn = modulo.querySelector('button[type=submit]');
-    btn.disabled = true; btn.textContent = 'Invio in corso';
+    btn.disabled = true; btn.classList.add('in-corso'); btn.textContent = 'Invio in corso';
     esito.className = 'esito'; esito.textContent = '';
-    const dati = Object.fromEntries(new FormData(modulo));
-    delete dati.privacy;
+    const campi = Object.fromEntries(new FormData(modulo));
+    if (campi._honey) return;                        /* compilato da un programma automatico */
+    const dati = { nome: campi.nome, email: campi.email, telefono: campi.telefono || '-', messaggio: campi.messaggio };
+    const web3 = CHIAVE_WEB3FORMS.trim() !== '';
+    const indirizzo = web3 ? 'https://api.web3forms.com/submit' : modulo.action;
+    const corpo = web3
+      ? { access_key: CHIAVE_WEB3FORMS, subject: 'Nuova richiesta dal sito: lezioni di pianoforte', from_name: 'Sito lezioni di pianoforte', replyto: dati.email, ...dati }
+      : { _subject: 'Nuova richiesta dal sito: lezioni di pianoforte', _template: 'table', _captcha: 'false', ...dati };
+    const stop = new AbortController();
+    const limite = setTimeout(() => stop.abort(), 25000);
     try{
-      const r = await fetch(modulo.action, {
+      const r = await fetch(indirizzo, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(dati)
+        body: JSON.stringify(corpo),
+        signal: stop.signal
       });
       let j = {};
       try { j = await r.json(); } catch(_) {}
       const riuscito = j.success === true || j.success === 'true';
-      const daAttivare = /activ/i.test(j.message || '');   /* prima volta: FormSubmit chiede di attivare il modulo */
+      const daAttivare = /activ/i.test(j.message || '');   /* FormSubmit, prima volta: chiede di attivare il modulo */
       if (!r.ok || (!riuscito && !daAttivare)) throw new Error(j.message || r.status);
       esito.className = 'esito ok';
       esito.textContent = "Richiesta inviata. Ti ricontatterò al più presto all'indirizzo email che hai indicato.";
@@ -648,9 +657,12 @@ footer a{color:var(--ottone-chiaro)}
     }catch(err){
       console.warn('Invio modulo:', err);
       esito.className = 'esito errore';
-      esito.textContent = "La richiesta non è partita. Controlla la connessione e riprova, oppure scrivi direttamente all'indirizzo email indicato.";
+      esito.textContent = err.name === 'AbortError'
+        ? "Il servizio di invio non ha risposto in tempo. Riprova tra poco, oppure scrivi direttamente all'indirizzo email indicato."
+        : "La richiesta non è partita. Controlla la connessione e riprova, oppure scrivi direttamente all'indirizzo email indicato.";
     }finally{
-      btn.disabled = false; btn.textContent = 'Invia la richiesta';
+      clearTimeout(limite);
+      btn.disabled = false; btn.classList.remove('in-corso'); btn.textContent = 'Invia la richiesta';
     }
   });
 })();
