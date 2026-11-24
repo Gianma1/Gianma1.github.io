@@ -7,7 +7,6 @@ Usa "Trova e sostituisci" dell'editor:
 |---|---|
 | `https://lezioni-piano-cuneo.vercel.app/` | l'indirizzo definitivo del sito |
 | `lorellamigliaccio@gmail.com` | l'email di Lorella |
-| `INSERISCI-QUI-LA-CHIAVE-WEB3FORMS` | la chiave di Web3Forms (vedi punto 3) |
 
 Il testo "Chi sono" è segnato con `▼▼▼` dentro `index.html`: incolla lì la descrizione di Superprof.
 
@@ -26,10 +25,11 @@ Finché una foto manca, al suo posto si vede un riquadro rigato (come le corde d
 
 I file della cartella `fonts/` contengono il carattere del sito (Bodoni Moda, licenza libera SIL OFL): vanno caricati insieme al resto.
 
-## 3. Modulo di contatto (Web3Forms, gratis fino a 250 messaggi al mese)
-1. Vai su https://web3forms.com, inserisci l'email di Lorella e premi "Create Access Key".
-2. Arriva una email con la chiave: copiala al posto di `INSERISCI-QUI-LA-CHIAVE-WEB3FORMS`.
-3. I messaggi arriveranno a quell'email. Rispondendo, si risponde direttamente a chi ha scritto.
+## 3. Modulo di contatto (FormSubmit, gratuito)
+Il modulo invia le richieste a lorellamigliaccio@gmail.com tramite formsubmit.co, senza account né chiavi.
+La prima volta che qualcuno invia il modulo, FormSubmit manda a Lorella un'email "Confirm your email / Activate form":
+basta premere il pulsante di attivazione una volta sola. Da quel momento ogni richiesta arriva come email,
+e rispondendo si risponde direttamente a chi ha scritto.
 
 ## 4. Pubblicazione gratuita su GitHub Pages
 1. Su GitHub crea un repository **pubblico** chiamato esattamente `Gianma1.github.io`
