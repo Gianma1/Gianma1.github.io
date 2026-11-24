@@ -6,7 +6,7 @@ Usa "Trova e sostituisci" dell'editor:
 | Cerca | Sostituisci con |
 |---|---|
 | `https://lezioni-piano-cuneo.vercel.app/` | l'indirizzo definitivo del sito |
-| `lezionidipianofortecuneo@gmail.com` | l'email di Lorella |
+| `lezionidipianofortecuneo@gmail.com` | l'email di contatto |
 
 Il testo "Chi sono" è segnato con `▼▼▼` dentro `index.html`: incolla lì la descrizione di Superprof.
 
@@ -16,7 +16,7 @@ Crea una cartella `img/` accanto a `index.html` e mettici questi file (JPG, lato
 | File | Dove appare | Formato |
 |---|---|---|
 | `copertina.jpg` | in alto, accanto al titolo | verticale 4:5 |
-| `lorella.jpg` | sezione "Chi sono" | verticale 4:5 |
+| `ritratto.jpg` | sezione "Chi sono" | verticale 4:5 |
 | `galleria-1.jpg` | galleria, foto grande | verticale o quadrata |
 | `galleria-2.jpg` … `galleria-5.jpg` | galleria | orizzontali |
 | `condivisione.jpg` | anteprima quando il link è condiviso su WhatsApp/Facebook | 1200×630 |
@@ -27,7 +27,7 @@ I file della cartella `fonts/` contengono il carattere del sito (Bodoni Moda, li
 
 ## 3. Modulo di contatto (FormSubmit, gratuito)
 Il modulo invia le richieste a lezionidipianofortecuneo@gmail.com tramite formsubmit.co, senza account né chiavi.
-La prima volta che qualcuno invia il modulo, FormSubmit manda a Lorella un'email "Confirm your email / Activate form":
+La prima volta che qualcuno invia il modulo, FormSubmit manda all'indirizzo di contatto un'email "Confirm your email / Activate form":
 basta premere il pulsante di attivazione una volta sola. Da quel momento ogni richiesta arriva come email,
 e rispondendo si risponde direttamente a chi ha scritto.
 
